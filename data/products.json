@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "Zameer X1",
+    "slug": "zameer-x1",
+    "price": 699,
+    "image": "https://picsum.photos/seed/x1/600/400",
+    "short": "Powerful performance, sleek design.",
+    "description": "Zameer X1 packs a flagship processor, 6.5-inch OLED, and excellent battery life. Perfect for power users.",
+    "specs": ["6.5-inch OLED", "8GB RAM", "128GB Storage"]
+  },
+  {
+    "id": "2",
+    "name": "Zameer Lite",
+    "slug": "zameer-lite",
+    "price": 299,
+    "image": "https://picsum.photos/seed/lite/600/400",
+    "short": "Great value for everyday use.",
+    "description": "Affordable performance with long battery life and a compact form-factor.",
+    "specs": ["6.0-inch LCD", "4GB RAM", "64GB Storage"]
+  },
+  {
+    "id": "3",
+    "name": "Zameer Fold",
+    "slug": "zameer-fold",
+    "price": 1299,
+    "image": "https://picsum.photos/seed/fold/600/400",
+    "short": "Innovative foldable display.",
+    "description": "A premium foldable phone with multitasking features and a stunning flexible display.",
+    "specs": ["7.8-inch foldable OLED", "12GB RAM", "256GB Storage"]
+  },
+  {
+    "id": "4",
+    "name": "Zameer Zoom",
+    "slug": "zameer-zoom",
+    "price": 799,
+    "image": "https://picsum.photos/seed/zoom/600/400",
+    "short": "Outstanding camera system.",
+    "description": "Capture professional-like photos with a versatile multi-lens camera system.",
+    "specs": ["6.4-inch AMOLED", "8GB RAM", "128GB Storage"]
+  },
+  {
+    "id": "5",
+    "name": "Zameer Mini",
+    "slug": "zameer-mini",
+    "price": 399,
+    "image": "https://picsum.photos/seed/mini/600/400",
+    "short": "Compact and pocketable.",
+    "description": "Small form factor with surprisingly powerful internals for daily tasks.",
+    "specs": ["5.4-inch OLED", "6GB RAM", "128GB Storage"]
+  },
+  {
+    "id": "6",
+    "name": "Zameer Pro Max",
+    "slug": "zameer-pro-max",
+    "price": 999,
+    "image": "https://picsum.photos/seed/promax/600/400",
+    "short": "Top-tier performance and display.",
+    "description": "Best-in-class display and processing power for creators and gamers.",
+    "specs": ["6.8-inch LTPO OLED", "12GB RAM", "512GB Storage"]
+  }
+]
