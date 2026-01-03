@@ -1,9 +1,26 @@
-import products from "../../../data/products.json";
 import Image from "next/image";
 import AddToCartButton from "../../../components/AddToCartButton";
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = products.find((p) => p.slug === params.slug);
+async function getProduct(slug: string) {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products`, {
+      cache: 'no-store'
+    });
+    if (response.ok) {
+      const products = await response.json();
+      return products.find((p: any) => p.slug === slug);
+    }
+  } catch (error) {
+    console.error('Error fetching product:', error);
+  }
+  
+  // Fallback to static data
+  const products = await import("../../../data/products.json");
+  return products.default.find((p: any) => p.slug === slug);
+}
+
+export default async function ProductPage({ params }: { params: { slug: string } }) {
+  const product = await getProduct(params.slug);
   if (!product) return <div className="p-8">Product not found</div>;
 
   return (
