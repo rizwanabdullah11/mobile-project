@@ -1,7 +1,25 @@
-import products from "../../data/products.json";
 import ProductCard from "../../components/ProductCard";
 
-export default function Products() {
+async function getProducts() {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products`, {
+      cache: 'no-store' // Ensure fresh data
+    });
+    if (response.ok) {
+      return response.json();
+    }
+  } catch (error) {
+    console.error('Error fetching products:', error);
+  }
+  
+  // Fallback to static data
+  const products = await import("../../data/products.json");
+  return products.default;
+}
+
+export default async function Products() {
+  const products = await getProducts();
+
   return (
     <div className="mx-auto max-w-7xl px-6 py-12">
       <h1 className="text-2xl font-bold">Products</h1>

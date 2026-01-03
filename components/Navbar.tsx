@@ -19,6 +19,9 @@ export default function Navbar() {
             <Link href="/products" className={pathname === "/products" ? "font-semibold text-zinc-900" : ""}>
               Products
             </Link>
+            <Link href="/admin" className={pathname.startsWith("/admin") ? "font-semibold text-zinc-900" : ""}>
+              Admin
+            </Link>
           </nav>
         </div>
 
